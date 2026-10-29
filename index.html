@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Portfolio | Corporate IT / Security / Automation</title>
+  <meta name="description" content="社内SEとして、社内IT運用・情報セキュリティ / ISMS・業務改善と自動化に取り組んでいます。">
+  <script>
+    // 描画前にテーマを決めてダークモードのちらつきを防ぐ。js クラスは JS 有効時だけアニメーションを有効にするため
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      var theme = null;
+      try { theme = localStorage.getItem("theme"); } catch (e) {}
+      if (theme !== "dark" && theme !== "light") {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      root.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#top" class="logo">Portfolio<span>.</span></a>
+    <nav class="nav" id="nav" aria-label="ページ内ナビゲーション">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#works">Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="theme-toggle" aria-label="テーマ切り替え">🌙</button>
+      <button class="icon-btn menu-btn" id="menu-btn" aria-label="メニュー" aria-expanded="false" aria-controls="nav">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="hero-eyebrow">Corporate IT / Security / Automation</p>
+      <h1 class="hero-title">社内IT・セキュリティ・業務改善を、<br class="br-wide">運用まで見据えて整える。</h1>
+      <p class="hero-lead">
+        社内SEとして、社内システムの運用・保守、情報セキュリティ / ISMS 対応、Python などを使った業務自動化に取り組んできました。
+      </p>
+      <div class="hero-actions">
+        <a href="#experience" class="btn">経験を見る</a>
+        <a href="#works" class="btn btn-outline">取り組み領域</a>
+      </div>
+    </section>
+
+    <section id="about" class="section fade-in">
+      <h2 class="section-title"><span class="title-en">About</span><span class="title-ja">自己紹介</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">
+            製造業での生産管理を経て、ITスキルの学習を重ね、社内SEとしてキャリアを積んできました。
+          </p>
+          <p>
+            仕組みを導入するだけでなく、マニュアル整備や属人化の防止まで含めて、運用が続く形に整えることを大切にしています。今後は GRC・セキュリティ領域をさらに強化していきます。
+          </p>
+        </div>
+        <dl class="profile-list">
+          <div><dt>職種</dt><dd>社内SE</dd></div>
+          <div><dt>専門領域</dt><dd>情報セキュリティ / ISMS</dd></div>
+          <div><dt>取り組み</dt><dd>業務改善・自動化</dd></div>
+          <div><dt>資格</dt><dd>ISMS審査員補</dd></div>
+          <div><dt>今後</dt><dd>GRC・セキュリティ領域の強化</dd></div>
+        </dl>
+      </div>
+      <ul class="pillars" aria-label="3つの軸">
+        <li class="pillar">
+          <p class="pillar-label">Corporate IT</p>
+          <p>社内システムの運用・保守と、アカウント管理などの社内IT業務</p>
+        </li>
+        <li class="pillar">
+          <p class="pillar-label">Security / ISMS</p>
+          <p>ISMS審査対応・内部監査・規程整備・セキュリティ教育</p>
+        </li>
+        <li class="pillar">
+          <p class="pillar-label">Automation</p>
+          <p>Python などを使った業務自動化と運用の効率化</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience" class="section fade-in">
+      <h2 class="section-title"><span class="title-en">Experience</span><span class="title-ja">経歴</span></h2>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <p class="timeline-phase">Manufacturing</p>
+          <h3 class="timeline-title">製造業（生産管理）</h3>
+          <ul class="timeline-list">
+            <li>医療・自動車産業向けポンプの工程管理</li>
+            <li>他部署とのスケジュール調整</li>
+            <li>資料作成</li>
+          </ul>
+        </li>
+        <li class="timeline-item">
+          <p class="timeline-phase">Learning</p>
+          <h3 class="timeline-title">ITスキル学習</h3>
+          <ul class="timeline-list">
+            <li>フロントエンドを中心とした ITスキルの学習</li>
+          </ul>
+        </li>
+        <li class="timeline-item">
+          <p class="timeline-phase">Corporate IT</p>
+          <h3 class="timeline-title">社内SE</h3>
+          <ul class="timeline-list">
+            <li>社内システムの運用・保守</li>
+            <li>アカウント管理などの社内IT業務</li>
+            <li>業務効率化</li>
+            <li>Python などを利用した業務自動化</li>
+            <li>マニュアル整備</li>
+            <li>属人化の防止</li>
+          </ul>
+        </li>
+        <li class="timeline-item">
+          <p class="timeline-phase">Security / ISMS</p>
+          <h3 class="timeline-title">情報セキュリティ / ISMS</h3>
+          <ul class="timeline-list">
+            <li>ISMS審査対応</li>
+            <li>内部監査</li>
+            <li>情報資産台帳の管理</li>
+            <li>社内規程の見直し</li>
+            <li>情報セキュリティ教育</li>
+            <li>標的型メール訓練の企画・運営</li>
+          </ul>
+          <p class="timeline-note">資格：ISMS審査員補</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" class="section fade-in">
+      <h2 class="section-title"><span class="title-en">Skills</span><span class="title-ja">スキル</span></h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Corporate IT</h3>
+          <ul class="card-list">
+            <li>社内システムの運用・保守</li>
+            <li>アカウント管理</li>
+            <li>IT運用の改善</li>
+            <li>マニュアル・運用手順の整備</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Security / ISMS</h3>
+          <ul class="card-list">
+            <li>ISMS運用</li>
+            <li>内部監査</li>
+            <li>情報資産管理</li>
+            <li>セキュリティ教育</li>
+            <li>規程整備</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Automation / Development</h3>
+          <ul class="card-list">
+            <li>Python</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>業務自動化</li>
+            <li>運用効率化</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="works" class="section fade-in">
+      <h2 class="section-title"><span class="title-en">Works</span><span class="title-ja">取り組み事例</span></h2>
+      <p class="section-lead">実務で取り組んできた3つの領域を、課題・対応・取り組みの流れで紹介します。</p>
+      <div class="cards">
+        <article class="card case">
+          <h3>業務自動化</h3>
+          <dl class="case-flow">
+            <div><dt>課題</dt><dd>手作業に頼る定型的な業務の効率化</dd></div>
+            <div><dt>対応</dt><dd>Python などを利用した業務の自動化</dd></div>
+            <div><dt>取り組み</dt><dd>自動化と運用の効率化を、業務改善の一環として進める</dd></div>
+          </dl>
+          <p class="tags"><span class="tag">Python</span><span class="tag">業務効率化</span></p>
+        </article>
+        <article class="card case">
+          <h3>ISMS / セキュリティ運用改善</h3>
+          <dl class="case-flow">
+            <div><dt>課題</dt><dd>ISMS に沿ったセキュリティ運用の維持と、社内への定着</dd></div>
+            <div><dt>対応</dt><dd>ISMS審査対応、内部監査、情報資産台帳の管理、社内規程の見直し、セキュリティ教育、標的型メール訓練の企画・運営</dd></div>
+            <div><dt>取り組み</dt><dd>台帳・規程などの管理面と、教育・訓練などの人的対策の両面から運用する</dd></div>
+          </dl>
+          <p class="tags"><span class="tag">ISMS</span><span class="tag">内部監査</span><span class="tag">教育・訓練</span></p>
+        </article>
+        <article class="card case">
+          <h3>社内IT運用改善</h3>
+          <dl class="case-flow">
+            <div><dt>課題</dt><dd>特定の担当者に依存しやすい社内IT運用</dd></div>
+            <div><dt>対応</dt><dd>社内システムの運用・保守、アカウント管理、マニュアル・運用手順の整備</dd></div>
+            <div><dt>取り組み</dt><dd>マニュアル・手順を整備し、属人化を防ぐ運用づくりを進める</dd></div>
+          </dl>
+          <p class="tags"><span class="tag">運用・保守</span><span class="tag">マニュアル整備</span></p>
+        </article>
+      </div>
+      <p class="note">具体的な事例や成果物は、公開できる範囲が確定しだい掲載します。</p>
+    </section>
+
+    <section id="contact" class="section fade-in">
+      <h2 class="section-title"><span class="title-en">Contact</span><span class="title-ja">お問い合わせ</span></h2>
+      <div class="contact-box">
+        <p>現在、公開用の連絡先を準備中です。</p>
+        <p>連絡先は公開時に設定予定です。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Corporate IT / Security / Automation</p>
+  </footer>
+
+  <button class="to-top" id="to-top" aria-label="ページ上部へ戻る">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
